@@ -22,3 +22,5 @@ VID_MEDIA_URL = 'http://...'
 $ npm run build
 $ npm run dev
 ```
+
+Open http://localhost:4000/streamer.html to start streaming WebSocket and http://localhost:4000/client.html to view stream.
