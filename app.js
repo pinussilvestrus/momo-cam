@@ -1,6 +1,7 @@
 const path = require('path');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
+const cors = require('@koa/cors');
 const serve = require('koa-static');
 const WebSocket = require('ws');
 
@@ -35,6 +36,7 @@ wsServer.on('connection', (ws) => {
 app
   .use(bodyParser())
   .use(serve(path.join(__dirname, 'public')))
+  .use(cors())
 
   .listen(HTTP_PORT, () => {
     console.log(`Server Started on http://localhost:${HTTP_PORT.toString()}`);

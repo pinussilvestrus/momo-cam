@@ -8,9 +8,7 @@
         // get video dom element
         const video = document.querySelector('video');
         
-        // request access to webcam
-        navigator.mediaDevices.getUserMedia({video: {width: 426, height: 240}}).then((stream) => video.srcObject = stream);
-        
+        // TODO: Move to src/
         // returns a frame encoded in base64
         const getFrame = () => {
             const canvas = document.createElement('canvas');
@@ -30,5 +28,6 @@
             }, 1000 / FPS);
         }
     </script>
+    <script src="bundle.js"></script>
 </body>
 </html>

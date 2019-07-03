@@ -8,6 +8,7 @@
     <body>
         <img src="">
         <script>
+            // TODO: Move to src/
             // get img dom element
             const img = document.querySelector('img');
             
@@ -15,6 +16,7 @@
             const ws = new WebSocket(WS_URL);
             ws.onopen = () => console.log(`Connected to ${WS_URL}`);
             ws.onmessage = message => {
+                console.log('Received:', message);
                 // set the base64 string to the src tag of the image
                 img.src = message.data;
             }

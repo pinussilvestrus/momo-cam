@@ -3,9 +3,18 @@ Combined Node.js based streamer and client service for live-streaming our lovabl
 
 ## Installation
 
+Install all the stuff
+
 ```sh
 $ npm i
 ```
+
+Set environment variables in local `.env` file
+
+```json
+MEDIA_URL = 'http://...'
+```
+
 
 ## Usage
 
