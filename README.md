@@ -12,7 +12,7 @@ $ npm i
 Set environment variables in local `.env` file
 
 ```json
-MEDIA_URL = 'http://...'
+VID_MEDIA_URL = 'http://...'
 ```
 
 
