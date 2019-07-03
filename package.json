@@ -4,6 +4,9 @@
   "description": "Combined Node.js based streamer and client service for live-streaming our lovable Momo",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "webpack --mode=production -p --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,25 +20,29 @@
   },
   "homepage": "https://github.com/pinussilvestrus/momo-cam#readme",
   "dependencies": {
-    "kcors": "^2.2.2",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
-    "nodemon": "^1.19.1",
-    "redis": "^2.8.0"
+    "koa-static": "^5.0.0",
+    "webpack": "^4.35.2",
+    "ws": "^7.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-async-to-generator": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/preset-stage-3": "^7.0.0",
-    "@babel/register": "^7.4.4",
     "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-watch": "^7.0.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^7.14.2"
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   }
 }
