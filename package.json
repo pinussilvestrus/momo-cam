@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start:dev": "nodemon app.js",
     "build": "webpack -p --config webpack.config.js --mode=production",
     "build:dev": "webpack --config webpack.config.js --watch --mode=development",
+    "dev": "run-p start:dev build:dev",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -38,7 +39,6 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-watch": "^7.0.0",
-    "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
@@ -48,7 +48,6 @@
     "nodemon": "^1.19.1",
     "npm-run-all": "^4.1.5",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2",
     "webpack-dotenv-plugin": "^2.1.0"
   }
 }
