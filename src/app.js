@@ -2,14 +2,24 @@
 import initStream from './initStream';
 
 /** Frontend */
-console.log('Frontend will be established here soon ....');
+const client = document.querySelector('#client');
+
+if (client) {
+
+  console.log('Frontend will be established here soon ....');
+
+}
 
 /** Backend */
-const video = document.querySelector('video');
+const streamer = document.querySelector('#streamer');
 
-if (video) {
+if (streamer) {
+
+  const video = document.querySelector('video');
+
   initStream({
     video,
-    navigator,
+    navigator
   });
+
 }
