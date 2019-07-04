@@ -1,25 +1,32 @@
 /* global document, navigator */
-import initStream from './initStream';
+import Client from './client';
+import Streamer from './streamer';
 
-/** Frontend */
-const client = document.querySelector('#client');
+/** Client */
+const clientDiv = document.querySelector('#client');
 
-if (client) {
+if (clientDiv) {
 
-  console.log('Frontend will be established here soon ....');
+  const img = document.querySelector('img');
+  const client = new Client({
+    img
+  });
+
+  client.init();
 
 }
 
-/** Backend */
-const streamer = document.querySelector('#streamer');
+/** Streamer */
+const streamerDiv = document.querySelector('#streamer');
 
-if (streamer) {
+if (streamerDiv) {
 
   const video = document.querySelector('video');
-
-  initStream({
+  const streamer = new Streamer({
     video,
     navigator
   });
+
+  streamer.init();
 
 }

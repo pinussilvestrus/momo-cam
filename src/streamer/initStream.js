@@ -3,6 +3,11 @@ const {
   IMG_MEDIA_URL
 } = process.env;
 
+
+/**
+ *  @param {DOMNavigator} options.navigator
+ *  @param {DOMElement} options.video 
+ */
 const initStream = (options) => {
 
   const {

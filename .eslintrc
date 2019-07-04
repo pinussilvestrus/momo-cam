@@ -7,6 +7,7 @@
             "skipBlankLines": true,
             "ignoreComments": true
         }],
-        "padded-blocks": ["error", "always"]
+        "padded-blocks": ["error", "always"],
+        "class-methods-use-this": [ 0 ]
     }
 }
