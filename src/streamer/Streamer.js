@@ -21,7 +21,6 @@ export default class Streamer {
 
     this.navigator = options.navigator;
     this.streamerDiv = options.streamerDiv;
-    [this.video] = this.streamerDiv.children('video');
     this.provider = this.initStreamingProvider();
 
   }
@@ -34,8 +33,7 @@ export default class Streamer {
 
     return new Provider({
       navigator: this.navigator,
-      streamerDiv: this.streamerDiv,
-      video: this.video
+      streamerDiv: this.streamerDiv
     });
   
   }

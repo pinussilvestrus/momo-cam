@@ -3,7 +3,6 @@ import BaseProvider from './BaseProvider';
 
 export default class WebcamProvider extends BaseProvider {
     
-
   constructor(options) {
 
     super({
@@ -12,11 +11,13 @@ export default class WebcamProvider extends BaseProvider {
     });
 
     this.navigator = options.navigator;
-    this.video = options.video;
+    this.video = $('<video autoplay></video>');
   
   }
 
   provideStream() {
+
+    this.streamerDiv.append(this.video);
 
     this.navigator.mediaDevices.getUserMedia({
 
@@ -25,7 +26,7 @@ export default class WebcamProvider extends BaseProvider {
       }
     }).then((stream) => {
 
-      this.video.srcObject = stream;
+      this.video[0].srcObject = stream;
 
       this.updateStatus();
     
@@ -37,9 +38,9 @@ export default class WebcamProvider extends BaseProvider {
 
     const canvas = $('<canvas/>');
 
-    canvas.width = this.video.videoWidth;
-    canvas.height = this.video.videoHeight;
-    canvas[0].getContext('2d').drawImage(this.video, 0, 0);
+    canvas.width = this.video[0].videoWidth;
+    canvas.height = this.video[0].videoHeight;
+    canvas[0].getContext('2d').drawImage(this.video[0], 0, 0);
 
     const data = canvas[0].toDataURL('image/png');
 

@@ -1,3 +1,4 @@
+/* global $ */
 import BaseProvider from './BaseProvider';
 
 export default class VideoProvider extends BaseProvider {
@@ -9,7 +10,7 @@ export default class VideoProvider extends BaseProvider {
       name: 'video'
     });
 
-    this.video = options.video;
+    this.video = $('<video autoplay></video>');
   
   }
 
