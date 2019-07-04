@@ -13,6 +13,7 @@ Set environment variables in local `.env` file
 
 ```json
 VID_MEDIA_URL = 'http://...'
+IMAGE_MEDIA_URL = 'http://...'
 ```
 
 

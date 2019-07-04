@@ -1,9 +1,20 @@
 /* global document */
-import initStream from './initStream';
+import {
+  getStreamStrategy,
+  ImageProvider,
+  WebcamProvider,
+  VideoProvider
+} from './providers';
 
 import createWSConnection from '../web-socket/createWSConnection';
 
 const FPS = 5;
+
+const providers = {
+  image: ImageProvider,
+  webcam: WebcamProvider,
+  video: VideoProvider
+};
 
 export default class Streamer {
 
@@ -11,17 +22,28 @@ export default class Streamer {
 
     this.navigator = options.navigator;
     this.video = options.video;
+    this.provider = this.initStreamingProvider();
 
+  }
+
+  initStreamingProvider() {
+
+    const flags = process.env;
+
+    const Provider = providers[getStreamStrategy(flags)];
+
+    return new Provider({
+      navigator: this.navigator,
+      video: this.video
+    });
+  
   }
 
   init() {
 
     const self = this;
 
-    initStream({
-      navigator: this.navigator,
-      video: this.video
-    });
+    this.provider.provideStream();
     
     createWSConnection({
       openFn: (ws) => {
