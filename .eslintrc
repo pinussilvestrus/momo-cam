@@ -1,6 +1,12 @@
 {
     "extends": "airbnb",
     "rules": {
-        "func-names": ["error", "never"]
+        "func-names": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "no-trailing-spaces": ["error", { 
+            "skipBlankLines": true,
+            "ignoreComments": true
+        }],
+        "padded-blocks": ["error", "always"]
     }
 }
