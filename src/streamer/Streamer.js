@@ -1,4 +1,3 @@
-/* global document */
 import {
   getStreamStrategy,
   ImageProvider,
@@ -52,27 +51,13 @@ export default class Streamer {
 
         setInterval(() => {
 
-          ws.send(self.getFrame());
+          ws.send(self.provider.getFrame());
         
         }, 1000 / FPS);
       
       }
     });
         
-  }
-
-  getFrame() {
-
-    const canvas = document.createElement('canvas');
-
-    canvas.width = this.video.videoWidth;
-    canvas.height = this.video.videoHeight;
-    canvas.getContext('2d').drawImage(this.video, 0, 0);
-
-    const data = canvas.toDataURL('image/png');
-
-    return data;
-
   }
 
 }

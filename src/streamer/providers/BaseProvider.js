@@ -23,6 +23,12 @@ export default class BaseProvider {
   
   }
 
+  getFrame() {
+
+    throw new Error('#getFrame method has to be implemented!');
+  
+  }
+
   updateStatus() {
 
     const statusDiv = this.streamerDiv.find('#status');
@@ -30,7 +36,6 @@ export default class BaseProvider {
 
     statusDiv.text('online');
 
-    console.log(statusIconDiv);
     statusIconDiv.removeClass('fa-times-circle');
     statusIconDiv.addClass('fa-check-circle');
   

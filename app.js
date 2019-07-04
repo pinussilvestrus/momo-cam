@@ -47,7 +47,9 @@ wsServer.on('connection', (ws) => {
 app
   .use(bodyParser())
   .use(serve(path.join(__dirname, 'public')))
-  .use(cors())
+  .use(cors({
+    origin: '*'
+  }))
 
   .listen(HTTP_PORT, () => {
 

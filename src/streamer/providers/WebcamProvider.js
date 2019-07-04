@@ -1,3 +1,4 @@
+/* global $ */
 import BaseProvider from './BaseProvider';
 
 export default class WebcamProvider extends BaseProvider {
@@ -30,6 +31,20 @@ export default class WebcamProvider extends BaseProvider {
     
     });
   
+  }
+
+  getFrame() {
+
+    const canvas = $('<canvas/>');
+
+    canvas.width = this.video.videoWidth;
+    canvas.height = this.video.videoHeight;
+    canvas[0].getContext('2d').drawImage(this.video, 0, 0);
+
+    const data = canvas[0].toDataURL('image/png');
+
+    return data;
+
   }
 
 }
