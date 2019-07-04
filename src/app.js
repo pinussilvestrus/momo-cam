@@ -7,7 +7,7 @@ const clientDiv = $('#client');
 
 if (clientDiv.length) {
 
-  const img = clientDiv.children('img');
+  const [img] = clientDiv.children('img');
 
   const client = new Client({
     img
@@ -20,7 +20,7 @@ if (clientDiv.length) {
 /** Streamer */
 const streamerDiv = $('#streamer');
 
-if (streamerDiv) {
+if (streamerDiv.length) {
 
   const streamer = new Streamer({
     streamerDiv,
