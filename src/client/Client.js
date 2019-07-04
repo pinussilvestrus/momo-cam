@@ -10,8 +10,6 @@ export default class Client {
 
   init() {
 
-    console.log('Frontend will be established here soon ....');
-
     createWSConnection({
       messageFn: (message) => {
 

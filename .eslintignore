@@ -1,1 +1,5 @@
-public
+public/**/*
+
+!app.css
+!client.html
+!streamer.html

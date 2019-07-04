@@ -1,11 +1,23 @@
 <html>
 <head>
-    <title>Streamer</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css" crossorigin="anonymous">
+
+    <title>Streamer Dashboard</title>
 </head>
 <body>
     <div id="streamer">
+
+        <h2>Streaming Dashboard</h2>
+
+        <p>Stream status: <span id="status"></span></p>
+        <p>Stream strategy: <span id="strategy"></span></p>
+
         <video autoplay></video>
     </div>
+
+    <script src="./jquery/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="bundle.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ import {
 
 import createWSConnection from '../web-socket/createWSConnection';
 
-const FPS = 5;
+const FPS = 10;
 
 const providers = {
   image: ImageProvider,
