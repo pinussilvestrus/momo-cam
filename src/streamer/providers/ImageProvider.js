@@ -2,9 +2,12 @@ import BaseProvider from './BaseProvider';
 
 export default class ImageProvider extends BaseProvider {
 
-  constructor() {
+  constructor(options) {
 
-    super('image');
+    super({
+      ...options,
+      name: 'image'
+    });
   
   }
 

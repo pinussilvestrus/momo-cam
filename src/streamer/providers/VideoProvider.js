@@ -4,7 +4,10 @@ export default class VideoProvider extends BaseProvider {
 
   constructor(options) {
         
-    super('video');
+    super({
+      ...options,
+      name: 'video'
+    });
 
     this.video = options.video;
   
@@ -13,6 +16,8 @@ export default class VideoProvider extends BaseProvider {
   provideStream() {
 
     this.video.src = process.env.VID_MEDIA_URL;
+
+    this.updateStatus();
 
   }
 

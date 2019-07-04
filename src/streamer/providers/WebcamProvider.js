@@ -5,7 +5,10 @@ export default class WebcamProvider extends BaseProvider {
 
   constructor(options) {
 
-    super('webcam');
+    super({
+      ...options,
+      name: 'webcam'
+    });
 
     this.navigator = options.navigator;
     this.video = options.video;
@@ -22,6 +25,8 @@ export default class WebcamProvider extends BaseProvider {
     }).then((stream) => {
 
       this.video.srcObject = stream;
+
+      this.updateStatus();
     
     });
   

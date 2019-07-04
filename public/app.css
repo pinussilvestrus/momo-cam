@@ -2,6 +2,14 @@
     text-align: center;
 }
 
+.fa-times-circle {
+    color: red
+}
+
+.fa-check-circle {
+    color: green
+}
+
 #streamer {
     text-align: center;
 }

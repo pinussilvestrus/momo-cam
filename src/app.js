@@ -1,13 +1,14 @@
-/* global document, navigator */
+/* global navigator, $ */
 import Client from './client';
 import Streamer from './streamer';
 
 /** Client */
-const clientDiv = document.querySelector('#client');
+const clientDiv = $('#client');
 
-if (clientDiv) {
+if (clientDiv.length) {
 
-  const img = document.querySelector('img');
+  const img = clientDiv.children('img');
+
   const client = new Client({
     img
   });
@@ -17,13 +18,12 @@ if (clientDiv) {
 }
 
 /** Streamer */
-const streamerDiv = document.querySelector('#streamer');
+const streamerDiv = $('#streamer');
 
 if (streamerDiv) {
 
-  const video = document.querySelector('video');
   const streamer = new Streamer({
-    video,
+    streamerDiv,
     navigator
   });
 
