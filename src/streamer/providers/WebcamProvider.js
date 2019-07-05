@@ -11,7 +11,7 @@ export default class WebcamProvider extends BaseProvider {
     });
 
     this.navigator = options.navigator;
-    this.video = $('<video autoplay></video>');
+    this.video = $('<video controls autoplay></video>');
   
   }
 
