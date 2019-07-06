@@ -32,8 +32,6 @@ export default class ImageProvider extends BaseProvider {
 
   provideStream() {
 
-    this.image.attr('width', 200);
-    this.image.attr('height', 200);
     this.image.addClass('center');
     this.image.attr('src', this.src);
     this.image.attr('crossOrigin', 'anonymous');
@@ -50,8 +48,8 @@ export default class ImageProvider extends BaseProvider {
 
     const canvas = $('<canvas/>');
 
-    canvas.width = this.image.width();
-    canvas.height = this.image.height();
+    canvas[0].width = this.image[0].width;
+    canvas[0].height = this.image[0].height;
     canvas[0].getContext('2d').drawImage(this.image[0], 0, 0);
 
     const data = canvas[0].toDataURL('image/png');

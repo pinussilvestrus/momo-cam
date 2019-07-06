@@ -38,8 +38,8 @@ export default class WebcamProvider extends BaseProvider {
 
     const canvas = $('<canvas/>');
 
-    canvas.width = this.video[0].videoWidth;
-    canvas.height = this.video[0].videoHeight;
+    canvas[0].width = this.video[0].videoWidth;
+    canvas[0].height = this.video[0].videoHeight;
     canvas[0].getContext('2d').drawImage(this.video[0], 0, 0);
 
     const data = canvas[0].toDataURL('image/png');
