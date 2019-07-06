@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/pinussilvestrus/momo-cam#readme",
   "dependencies": {
-    "@koa/cors": "^2.2.3",
+    "@koa/cors": "^3.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
@@ -32,10 +32,10 @@
     "ws": "^7.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-transform-async-to-generator": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-async-to-generator": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-watch": "^7.0.0",
