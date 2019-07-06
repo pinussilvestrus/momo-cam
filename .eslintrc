@@ -8,6 +8,8 @@
             "ignoreComments": true
         }],
         "padded-blocks": ["error", "always"],
-        "class-methods-use-this": [ 0 ]
+        "class-methods-use-this": [ 0 ],
+        "no-plusplus": [ 0 ],
+        "no-bitwise": [0]
     }
 }

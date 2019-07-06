@@ -16,15 +16,64 @@ export default class ImageProvider extends BaseProvider {
   
   }
 
+  base64Encode(str) {
+
+    const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+    let out = ''; let i = 0; const len = str.length; let c1; let c2; let
+      c3;
+    while (i < len) {
+
+      c1 = str.charCodeAt(i++) & 0xff;
+      if (i === len) {
+
+        out += CHARS.charAt(c1 >> 2);
+        out += CHARS.charAt((c1 & 0x3) << 4);
+        out += '==';
+        break;
+      
+      }
+      c2 = str.charCodeAt(i++);
+      if (i === len) {
+
+        out += CHARS.charAt(c1 >> 2);
+        out += CHARS.charAt(((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4));
+        out += CHARS.charAt((c2 & 0xF) << 2);
+        out += '=';
+        break;
+      
+      }
+      c3 = str.charCodeAt(i++);
+      out += CHARS.charAt(c1 >> 2);
+      out += CHARS.charAt(((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4));
+      out += CHARS.charAt(((c2 & 0xF) << 2) | ((c3 & 0xC0) >> 6));
+      out += CHARS.charAt(c3 & 0x3F);
+    
+    }
+    return out;
+
+  }
+
   refreshImageHandler() {
 
     const self = this;
 
     setInterval(() => {
 
-      self.image.src = `${self.src}/${new Date().getTime()}`;
+      $.ajax({
+        url: `${self.src}&id=${new Date().getTime()}`,
+        type: 'GET',
+        mimeType: 'text/plain; charset=x-user-defined',
+        success: (data) => {
 
-      // console.log(`Refreshed image-src: ${self.image.src}`);
+          const img = self.base64Encode(data);
+
+
+          self.image.attr('src', `data:image/gif;base64,${img}`);
+
+          // console.log(`Refreshed image-src: ${self.image[0].src}`);
+        
+        }
+      });
     
     }, 500);
   
