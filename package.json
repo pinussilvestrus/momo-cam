@@ -10,7 +10,7 @@
     "build:dev": "webpack --config webpack.config.js --watch --mode=development",
     "dev": "run-p start:dev build:dev",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "run-s lint build"
   },
   "repository": {
     "type": "git",
