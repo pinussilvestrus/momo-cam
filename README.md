@@ -9,7 +9,7 @@ Install all the stuff
 $ npm i
 ```
 
-Set environment variables in local `.env` file
+Set environment variables in local `.env` file to set correct [strategy](https://github.com/pinussilvestrus/momo-cam/tree/master/src/streamer/providers)
 
 ```json
 VID_MEDIA_URL = 'http://...'
