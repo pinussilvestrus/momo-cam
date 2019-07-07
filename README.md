@@ -1,6 +1,8 @@
 # momo-cam
 Combined Node.js based streamer and client service for live-streaming our lovable Momo ❤️
 
+<img src="./public/img/schema.png" />
+
 ## Installation
 
 Install all the stuff
