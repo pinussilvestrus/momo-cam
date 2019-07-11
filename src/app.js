@@ -7,10 +7,8 @@ const clientDiv = $('#client');
 
 if (clientDiv.length) {
 
-  const [img] = clientDiv.children('img');
-
   const client = new Client({
-    img
+    clientDiv
   });
 
   client.init();

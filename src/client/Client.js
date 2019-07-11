@@ -1,10 +1,11 @@
 import createWSConnection from '../web-socket/createWSConnection';
+import Renderer from './renderer';
 
 export default class Client {
 
   constructor(options) {
 
-    this.img = options.img;
+    this.clientDiv = options.clientDiv;
   
   }
 
@@ -14,8 +15,11 @@ export default class Client {
       messageFn: (message) => {
 
         console.log('Received:', message);
-        // set the base64 string to the src tag of the image
-        this.img.src = message.data;
+
+        Renderer.render({
+          renderNode: this.clientDiv[0],
+          src: message.data
+        });
       
       }
     });

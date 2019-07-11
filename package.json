@@ -28,6 +28,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
+    "lit-html": "^1.1.1",
     "webpack": "^4.35.3",
     "ws": "^7.1.0"
   },

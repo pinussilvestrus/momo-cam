@@ -88,8 +88,6 @@ export default class ImageProvider extends BaseProvider {
     this.refreshImageHandler();
 
     this.streamerDiv.append(this.image);
-
-    this.updateStatus();
   
   }
 

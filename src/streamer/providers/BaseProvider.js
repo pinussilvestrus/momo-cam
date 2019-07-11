@@ -9,10 +9,6 @@ export default class BaseProvider {
 
     this.streamerDiv = streamerDiv;
 
-    const strategyDiv = streamerDiv.find('#strategy');
-
-    strategyDiv.text(name);
-
     console.log(`Streaming via ${name}-strategy`);
   
   }
@@ -26,18 +22,6 @@ export default class BaseProvider {
   getFrame() {
 
     throw new Error('#getFrame method has to be implemented!');
-  
-  }
-
-  updateStatus() {
-
-    const statusDiv = this.streamerDiv.find('#status');
-    const statusIconDiv = this.streamerDiv.find('.status-icon');
-
-    statusDiv.text('online');
-
-    statusIconDiv.removeClass('fa-times-circle');
-    statusIconDiv.addClass('fa-check-circle');
   
   }
 

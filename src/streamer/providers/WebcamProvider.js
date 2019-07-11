@@ -27,8 +27,6 @@ export default class WebcamProvider extends BaseProvider {
     }).then((stream) => {
 
       this.video[0].srcObject = stream;
-
-      this.updateStatus();
     
     });
   

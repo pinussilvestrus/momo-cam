@@ -34,8 +34,6 @@ export default class VideoProvider extends BaseProvider {
     
     this.streamerDiv.append(this.video);
 
-    this.updateStatus();
-
   }
 
 }
