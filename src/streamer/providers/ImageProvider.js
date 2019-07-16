@@ -60,7 +60,7 @@ export default class ImageProvider extends BaseProvider {
     setInterval(() => {
 
       $.ajax({
-        url: `${self.src}&id=${new Date().getTime()}`,
+        url: `${self.src}`,
         type: 'GET',
         mimeType: 'text/plain; charset=x-user-defined',
         success: (data) => {

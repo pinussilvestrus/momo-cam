@@ -14,7 +14,7 @@ export default class StreamerRenderer {
     <p>Stream status: <span id="status">online</span> <i class="status-icon fa fa-check-circle"></i></p>
     <p>Stream strategy: <span id="strategy">${strategy}</span></p>
     
-    <!-- real content is rendered in strtagey -->`;
+    <!-- real content is rendered in strategy -->`;
   
   }
 
