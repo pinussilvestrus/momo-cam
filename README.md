@@ -1,5 +1,5 @@
 # momo-cam
-Combined Node.js based streamer and client service for live-streaming our lovable Momo ❤️
+Combined Node.js based streamer and client service for live-streaming our lovable Momo ❤️ Based on [`koa.js`](https://koajs.com/) and [`lit-html`](https://lit-html.polymer-project.org/).
 
 <img src="./public/img/schema.png" />
 
