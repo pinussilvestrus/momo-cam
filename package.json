@@ -29,7 +29,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "lit-html": "^1.1.1",
-    "webpack": "^4.37.0",
+    "webpack": "^4.39.0",
     "ws": "^7.1.1"
   },
   "devDependencies": {
