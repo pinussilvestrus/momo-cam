@@ -24,7 +24,7 @@
   "homepage": "https://github.com/pinussilvestrus/momo-cam#readme",
   "dependencies": {
     "@koa/cors": "^3.0.0",
-    "koa": "^2.8.1",
+    "koa": "^2.8.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
